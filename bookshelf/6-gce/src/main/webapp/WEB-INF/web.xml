@@ -38,14 +38,16 @@
     </context-param>
     <context-param>
         <param-name>sql.urlRemote</param-name>
-        <param-value>jdbc:mysql://google/${sql.dbName}?cloudSqlInstance=${sql.instanceName}&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory&amp;user=${sql.userName}&amp;password=${sql.password}</param-value>
+        <!--param-value>jdbc:mysql://google/bookshelf?cloudSqlInstance=bookstoresql:datacenter1&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory&amp;user=root&amp;password=123456</param-value-->	
+        <param-value>jdbc:mysql://google/bookshelf?cloudSqlInstance=bookstoresql:datacenter1&amp;socketFactory=com.google.cloud.sql.mysql.SocketFactory&amp;user=root&amp;password=123456</param-value>
     </context-param>
     <context-param>
         <param-name>sql.urlLocal</param-name>
-        <param-value>jdbc:mysql://localhost/${sql.dbName?user=${sql.userName}&amp;password=${sql.password}&amp;useSSL=false</param-value>
+        <!--param-value>jdbc:mysql://localhost:3306/${sql.dbName}?user=${sql.userName}&amp;password=${sql.password}&amp;useSSL=false</param-value-->
+        <param-value>jdbc:mysql://localhost:3306/bookshelf?user=root&amp;useSSL=false</param-value>
     </context-param>
     <context-param>
-        <param-name>bookshelf.callback</param-name>
+        <param-name>bookshelf.callback</param-name> 
         <param-value>${bookshelf.callback}</param-value>
     </context-param>
     <context-param>

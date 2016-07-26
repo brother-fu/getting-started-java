@@ -52,6 +52,9 @@ public class ListBookServlet extends HttpServlet {
 
     // Creates the DAO based on the Context Parameters
     String storageType = this.getServletContext().getInitParameter("bookshelf.storageType");
+    /** for CloudSql**/
+    //System.out.println("type is " + storageType);
+    storageType = "cloudsql";
     switch (storageType) {
       case "datastore":
         dao = new DatastoreDao();

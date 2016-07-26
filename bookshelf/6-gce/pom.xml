@@ -25,11 +25,11 @@ Copyright 2016 Google Inc. All Rights Reserved.
 
   <properties>
     <!-- [START config] -->
-    <bookshelf.storageType>datastore</bookshelf.storageType>   <!-- datastore or cloudsql -->
+    <bookshelf.storageType>cloudsql</bookshelf.storageType>   <!-- datastore or cloudsql -->
     <bookshelf.bucket></bookshelf.bucket>
     <sql.instanceName></sql.instanceName>
-    <sql.dbName></sql.dbName>
-    <sql.userName></sql.userName>
+    <sql.dbName>bookshelf</sql.dbName>
+    <sql.userName>root</sql.userName>
     <sql.password></sql.password> 
 
     <callback.host></callback.host> <!-- Typically projectname.appspot.com -->
@@ -126,7 +126,7 @@ Copyright 2016 Google Inc. All Rights Reserved.
     <dependency>                        <!-- http://dev.mysql.com/doc/connector-j/en/ -->
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>6.0.3</version>
+      <version>5.1.39</version>
     </dependency>
 
     <dependency>                        <!-- Apache Database Connection Pool API -->
@@ -157,7 +157,7 @@ Copyright 2016 Google Inc. All Rights Reserved.
       <plugin>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-maven-plugin</artifactId>
-        <version>9.3.7.v20160115</version>
+        <version>9.2.11.v20150529</version>
       </plugin>
     </plugins>
   </build>

@@ -38,12 +38,16 @@ public class CloudSqlDao implements BookDao {
    * A data access object for Bookshelf using a Google Cloud SQL server for storage.
    */
   public CloudSqlDao(final String url) throws SQLException {
-
-    dataSource.setUrl(url);
+    /* for local mysql*/
+	dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+	
+	
+	dataSource.setUrl(url);
     final String createTableSql = "CREATE TABLE IF NOT EXISTS books6 ( id INT NOT NULL "
         + "AUTO_INCREMENT, author VARCHAR(255), createdBy VARCHAR(255), createdById VARCHAR(255), "
         + "description VARCHAR(255), publishedDate VARCHAR(255), title VARCHAR(255), imageUrl "
         + "VARCHAR(255), PRIMARY KEY (id))";
+    System.out.println("trying to Linkdatabase");
     try (Connection conn = dataSource.getConnection()) {
       conn.createStatement().executeUpdate(createTableSql);
     }
