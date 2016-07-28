@@ -8,7 +8,7 @@
 	the specific language governing permissions and limitations under the License. -->
 <!-- [START config] -->
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
-	<application>bookstorecloudsql</application>
+	<application>bookstore333</application>
 	<version>1</version>
 	<threadsafe>true</threadsafe>
 </appengine-web-app>
